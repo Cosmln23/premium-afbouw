@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-nl="Premium Afbouw | Afwerking met precisie en toewijding"
+    data-en="Premium Afbouw | Finishing with precision and dedication"
+    data-pl="Premium Afbouw | Wykończenia z precyzją i zaangażowaniem">
+    Premium Afbouw | Afwerking met precisie en toewijding
+  </title>
+  <meta name="description"
+    content="Premium Afbouw — Afwerking met precisie en toewijding. Tegelwerk, spachtelwerk, gipsplaatwerk, parket en badkamerrenovatie.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Scripts -->
+  <script src="js/lang.js" defer></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            stone: {
+              50: '#fafaf9',
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+              300: '#d6d3d1',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              700: '#44403c',
+              800: '#292524',
+              900: '#1c1917',
+            },
+            accent: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'slide-up': 'slideUp 0.8s ease-out forwards',
+            'shimmer': 'shimmer 3s infinite',
+            'shine': 'shine 3s linear infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '50%': { transform: 'translateX(100%)' },
+              '100%': { transform: 'translateX(100%)' },
+            },
+            shine: {
+              'from': { 'background-position': '0 0' },
+              'to': { 'background-position': '-200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #fafaf9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #d6d3d1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a8a29e;
+    }
+
+    /* Hide scrollbar for sliders */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Smooth Reveal Animation - Optimized */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-100 {
+      transition-delay: 0.1s;
+    }
+
+    .delay-200 {
+      transition-delay: 0.2s;
+    }
+
+    .delay-300 {
+      transition-delay: 0.3s;
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+      transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+      transform-origin: top;
+    }
+
+    #mobile-menu.menu-closed {
+      opacity: 0;
+      transform: scaleY(0.95) translateY(-10px);
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #mobile-menu.menu-open {
+      opacity: 1;
+      transform: scaleY(1) translateY(0);
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* Accordion Transitions */
+    .accordion-content {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .accordion-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-btn[aria-expanded="true"] .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Optimized Infinite Scroll */
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      width: max-content;
+      animation: scroll 80s linear infinite;
+      will-change: transform;
+      /* GPU Acceleration */
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    .mask-edges {
+      mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    }
+
+    /* Focus States */
+    .custom-input:focus {
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+    }
+  </style>
+  <style>
+    .bg-grid-stone {
+      background-size: 50px 50px;
+      background-image: linear-gradient(to right, rgba(87, 83, 78, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(87, 83, 78, 0.08) 1px, transparent 1px);
+    }
+
+    .bg-grid-white {
+      background-size: 50px 50px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    }
+  </style>
+  <link id="all-fonts-link-font-geist" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-geist">
+    .font-geist {
+      font-family: 'Geist', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-roboto" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-roboto">
+    .font-roboto {
+      font-family: 'Roboto', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-montserrat" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-montserrat">
+    .font-montserrat {
+      font-family: 'Montserrat', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-poppins" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-poppins">
+    .font-poppins {
+      font-family: 'Poppins', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-playfair" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+  <style id="all-fonts-style-font-playfair">
+    .font-playfair {
+      font-family: 'Playfair Display', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-instrument-serif" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-instrument-serif">
+    .font-instrument-serif {
+      font-family: 'Instrument Serif', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-merriweather" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap">
+  <style id="all-fonts-style-font-merriweather">
+    .font-merriweather {
+      font-family: 'Merriweather', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-bricolage" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-bricolage">
+    .font-bricolage {
+      font-family: 'Bricolage Grotesque', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-jakarta" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+  <style id="all-fonts-style-font-jakarta">
+    .font-jakarta {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-manrope" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap">
+  <style id="all-fonts-style-font-manrope">
+    .font-manrope {
+      font-family: 'Manrope', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-space-grotesk" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-space-grotesk">
+    .font-space-grotesk {
+      font-family: 'Space Grotesk', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-work-sans" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+  <style id="all-fonts-style-font-work-sans">
+    .font-work-sans {
+      font-family: 'Work Sans', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-pt-serif" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap">
+  <style id="all-fonts-style-font-pt-serif">
+    .font-pt-serif {
+      font-family: 'PT Serif', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-geist-mono" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-geist-mono">
+    .font-geist-mono {
+      font-family: 'Geist Mono', monospace !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-space-mono" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap">
+  <style id="all-fonts-style-font-space-mono">
+    .font-space-mono {
+      font-family: 'Space Mono', monospace !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-quicksand" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-quicksand">
+    .font-quicksand {
+      font-family: 'Quicksand', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-nunito" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap">
+  <style id="all-fonts-style-font-nunito">
+    .font-nunito {
+      font-family: 'Nunito', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-newsreader" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap">
+  <style id="all-fonts-style-font-newsreader">
+    .font-newsreader {
+      font-family: 'Newsreader', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-google-sans-flex" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-google-sans-flex">
+    .font-google-sans-flex {
+      font-family: 'Google Sans Flex', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-oswald" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-oswald">
+    .font-oswald {
+      font-family: 'Oswald', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-dm-sans" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-dm-sans">
+    .font-dm-sans {
+      font-family: 'DM Sans', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-cormorant" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-cormorant">
+    .font-cormorant {
+      font-family: 'Cormorant Garamond', serif !important;
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-accent-200 selection:text-accent-900 text-stone-800 bg-white">
+  <!-- Navbar -->
+  <nav id="navbar"
+    class="fixed z-50 transition-all duration-300 supports-[backdrop-filter]:bg-white/60 bg-white/90 border-stone-200/50 border-b top-0 right-0 left-0 backdrop-blur-md">
+    <div class="flex h-20 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center group">
+        <img src="logo-transparent.png" alt="Premium Afbouw" class="h-12 w-auto transition-opacity duration-300 group-hover:opacity-80">
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center">
+        <a href="#services" class="text-sm font-medium text-stone-600 hover:text-accent-600 transition-colors px-3"
+          data-nl="Diensten" data-en="Services" data-pl="Usługi">
+          Diensten
+        </a>
+        <a href="#about" class="text-sm font-medium text-stone-600 hover:text-accent-600 transition-colors px-3"
+          data-nl="Over ons" data-en="About" data-pl="O nas">
+          Over ons
+        </a>
+        <a href="#faq" class="text-sm font-medium text-stone-600 hover:text-accent-600 transition-colors px-3"
+          data-nl="FAQ" data-en="FAQ" data-pl="FAQ">
+          FAQ
+        </a>
+        <a href="#contact" class="text-sm font-medium text-stone-600 hover:text-accent-600 transition-colors px-3"
+          data-nl="Contact" data-en="Contact" data-pl="Kontakt">
+          Contact
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="relative ml-4 gap-2 flex" id="lang-switcher">
+          <button onclick="changeLanguage('nl')"
+            class="w-10 h-10 rounded-full overflow-hidden border-2 border-transparent hover:border-amber-400 transition-all font-bold text-xs bg-stone-100 flex items-center justify-center lang-btn active-lang"
+            data-lang="nl">
+            NL
+          </button>
+          <button onclick="changeLanguage('en')"
+            class="w-10 h-10 rounded-full overflow-hidden border-2 border-transparent hover:border-amber-400 transition-all font-bold text-xs bg-stone-100 flex items-center justify-center lang-btn"
+            data-lang="en">
+            EN
+          </button>
+          <button onclick="changeLanguage('pl')"
+            class="w-10 h-10 rounded-full overflow-hidden border-2 border-transparent hover:border-amber-400 transition-all font-bold text-xs bg-stone-100 flex items-center justify-center lang-btn"
+            data-lang="pl">
+            PL
+          </button>
+        </div>
+
+        <div class="h-4 w-px bg-stone-300 mx-3"></div>
+
+        <a href="tel:+31"
+          class="flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-accent-600 transition-colors mr-4">
+          📞 061...
+        </a>
+        <a href="#contact"
+          class="bg-stone-900 hover:bg-stone-800 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
+          data-nl="Vraag offerte" data-en="Get a Quote" data-pl="Zapytaj o wycenę">
+          Vraag offerte
+        </a>
+      </div>
+
+      <!-- Mobile: phone + lang dropdown + burger -->
+      <div class="flex md:hidden items-center gap-3">
+        <a href="tel:+31" class="text-stone-700 hover:text-accent-600 transition-colors text-lg">📞</a>
+        <select id="mobile-lang-select" onchange="changeLanguage(this.value)"
+          class="text-xs font-bold text-stone-700 bg-stone-100 border-0 rounded-lg px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer">
+          <option value="nl">NL</option>
+          <option value="en">EN</option>
+          <option value="pl">PL</option>
+        </select>
+        <button onclick="toggleMobileMenu()" class="p-3 text-stone-600 hover:text-stone-900"
+          aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24"
+            data-icon="lucide:menu" style="stroke-width: 1.5;" class="iconify iconify--lucide">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 5h16M4 12h16M4 19h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="menu-closed flex flex-col bg-white/95 backdrop-blur-xl border-t border-stone-100 md:hidden absolute top-20 w-full left-0 shadow-xl z-40">
+      <div class="flex flex-col p-6 space-y-4">
+        <a href="#services" onclick="closeMobileMenu()"
+          class="text-base font-medium text-stone-700 py-2 border-b border-stone-50" data-nl="Diensten"
+          data-en="Services" data-pl="Usługi">
+          Diensten
+        </a>
+        <a href="#about" onclick="closeMobileMenu()"
+          class="text-base font-medium text-stone-700 py-2 border-b border-stone-50" data-nl="Over ons" data-en="About"
+          data-pl="O nas">
+          Over ons
+        </a>
+        <a href="#faq" onclick="closeMobileMenu()"
+          class="text-base font-medium text-stone-700 py-2 border-b border-stone-50" data-nl="FAQ" data-en="FAQ"
+          data-pl="FAQ">
+          FAQ
+        </a>
+        <a href="#contact" onclick="closeMobileMenu()"
+          class="text-base font-medium text-stone-700 py-2 border-b border-stone-50" data-nl="Contact" data-en="Contact"
+          data-pl="Kontakt">
+          Contact
+        </a>
+
+        <!-- Mobile Language Switcher -->
+        <div class="flex gap-4 py-2 justify-center" id="mobile-lang-switcher">
+          <button onclick="changeLanguage('nl'); closeMobileMenu()"
+            class="w-10 h-10 rounded-full overflow-hidden border-2 border-transparent hover:border-amber-400 transition-all font-bold text-sm bg-stone-100 flex items-center justify-center lang-btn active-lang"
+            data-lang="nl">
+            NL
+          </button>
+          <button onclick="changeLanguage('en'); closeMobileMenu()"
+            class="w-10 h-10 rounded-full overflow-hidden border-2 border-transparent hover:border-amber-400 transition-all font-bold text-sm bg-stone-100 flex items-center justify-center lang-btn"
+            data-lang="en">
+            EN
+          </button>
+          <button onclick="changeLanguage('pl'); closeMobileMenu()"
+            class="w-10 h-10 rounded-full overflow-hidden border-2 border-transparent hover:border-amber-400 transition-all font-bold text-sm bg-stone-100 flex items-center justify-center lang-btn"
+            data-lang="pl">
+            PL
+          </button>
+        </div>
+
+        <a href="#contact" onclick="closeMobileMenu()"
+          class="w-full bg-accent-500 text-white text-center text-base font-medium py-3 rounded-lg shadow-sm mt-2"
+          data-nl="Vraag een offerte" data-en="Get a Quote" data-pl="Zapytaj o wycenę">
+          Vraag een offerte
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex overflow-hidden bg-stone-50 pt-20 pb-16 relative items-center justify-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/d643e4d4-25a4-478b-8f16-a6e792508e03_3840w.jpg"
+        fetchpriority="high" alt="Marble Flooring Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-white/30 mix-blend-overlay"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="z-10 animate-slide-up text-center max-w-5xl mr-auto ml-auto pr-6 pl-6 relative">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900/5 border border-stone-900/10 backdrop-blur-md mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent-500 animate-pulse"></span>
+        <span class="uppercase text-xs font-semibold text-stone-600 tracking-wide" data-nl="Vakmanschap op maat"
+          data-en="Craftsmanship tailored for you" data-pl="Rzemiosło na miarę">
+          Vakmanschap op maat
+        </span>
+      </div>
+
+      <h1
+        class="md:text-6xl lg:text-7xl leading-[1.1] text-4xl font-playfair font-medium text-stone-900 tracking-tight mb-6 drop-shadow-sm">
+        <span class="underline decoration-stone-300 decoration-2 underline-offset-8">
+          <span
+            class="animate-shine bg-clip-text text-transparent bg-gradient-to-r from-stone-900 via-stone-500 to-stone-900 bg-[length:200%_auto]">
+            Premium
+          </span>
+          Afbouw
+        </span>
+        —
+        <span class="block mt-8 text-stone-500 font-sans" data-nl="Afwerking met precisie en toewijding"
+          data-en="Finishing with precision and dedication" data-pl="Wykończenia z precyzją i zaangażowaniem">
+          Afwerking met precisie en toewijding
+        </span>
+      </h1>
+
+      <p class="text-xl md:text-2xl text-stone-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed"
+        data-nl="Elke ruimte verdient meer dan een snelle oplossing. Ik werk met aandacht voor elk detail — van de eerste schets tot de laatste afwerking."
+        data-en="Every space deserves more than a quick fix. I work with care for every detail — from the first sketch to the final touch."
+        data-pl="Każde pomieszczenie zasługuje na coś więcej niż szybkie rozwiązanie. Pracuję z uwagą na każdy detal — od pierwszego szkicu do ostatniego pociągnięcia.">
+        Elke ruimte verdient meer dan een snelle oplossing. Ik werk met aandacht voor elk detail — van de eerste schets
+        tot de laatste afwerking.
+      </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <a href="#contact"
+          class="group relative overflow-hidden w-full sm:w-auto bg-accent-500 hover:bg-accent-600 text-white text-lg font-medium px-8 py-3.5 rounded-xl shadow-lg hover:shadow-accent-500/25 transition-all duration-300 transform hover:-translate-y-0.5 isolate">
+          <span class="relative z-10 flex items-center justify-center gap-2" data-nl="Vraag een offerte"
+            data-en="Get a Free Quote" data-pl="Zapytaj o wycenę">
+            Vraag een offerte
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="transition-transform duration-300 group-hover:translate-x-1">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </span>
+          <div
+            class="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/30 to-transparent z-0 skew-x-12">
+          </div>
+        </a>
+        <a href="#services"
+          class="sm:w-auto hover:bg-white/80 transition-all duration-300 flex items-center justify-center gap-2 text-lg font-medium text-stone-900 bg-white/50 w-full border-stone-200 border rounded-xl pt-3.5 pr-8 pb-3.5 pl-8 shadow-sm backdrop-blur-md">
+          <span data-nl="Bekijk diensten" data-en="View Services" data-pl="Zobacz usługi">Bekijk diensten</span>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18"
+            viewBox="0 0 24 24" data-icon="lucide:arrow-down" class="iconify iconify--lucide">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 5v14m7-7l-7 7l-7-7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-white border-b border-stone-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-end justify-between mb-10 gap-6 reveal">
+        <div class="">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex text-amber-400">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-stone-500" data-nl="5.0 Gemiddeld op basis van Google Reviews"
+              data-en="5.0 Average based on Google Reviews" data-pl="Średnia 5.0 na podstawie opinii Google">
+              5.0 Gemiddeld op basis van Google Reviews
+            </span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-medium text-stone-900 tracking-tight"
+            data-nl="Vertrouwd door lokale bewoners" data-en="Trusted by Locals"
+            data-pl="Zaufali nam lokalni mieszkańcy">
+            Vertrouwd door lokale bewoners
+          </h2>
+        </div>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="-mx-6 px-6 md:mx-0 md:px-0 [&amp;::-webkit-scrollbar]:hidden overflow-hidden mask-edges"
+        style="scrollbar-width: none; -ms-overflow-style: none;" id="reviews-carousel">
+        <div class="carousel-track pb-8 pt-2">
+          <!-- Items Set 1 -->
+          <div
+            class="w-[280px] md:w-[320px] flex-shrink-0 bg-stone-50 rounded-2xl p-6 border border-stone-100 flex flex-col h-full">
+            <div class="flex text-amber-400 mb-4">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+            </div>
+            <p class="text-stone-600 mb-6 flex-grow leading-relaxed"
+              data-nl='"Badkamer volledig gerenoveerd, alles perfect afgewerkt. Geen gedoe, gewoon goed vakwerk."'
+              data-en='"Full bathroom renovation, everything finished perfectly. No fuss, just quality work."'
+              data-pl='"Pełna renowacja łazienki, wszystko wykończone perfekcyjnie. Bez problemów, tylko dobra robota."'>
+              "Badkamer volledig gerenoveerd, alles perfect afgewerkt. Geen gedoe, gewoon goed vakwerk."
+            </p>
+            <div class="flex items-center gap-3 mt-auto">
+              <div
+                class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-500">
+                JV
+              </div>
+              <div>
+                <div class="text-sm font-medium text-stone-900">
+                  Jan V.
+                </div>
+                <div class="text-xs text-stone-400" data-nl="Google Review" data-en="Google Review" data-pl="Opinia Google">Google Review</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[280px] md:w-[320px] flex-shrink-0 bg-stone-50 rounded-2xl p-6 border border-stone-100 flex flex-col h-full">
+            <div class="flex text-amber-400 mb-4">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+            </div>
+            <p class="text-stone-600 mb-6 flex-grow leading-relaxed"
+              data-nl='"Tegels en parket gelegd in de hele woning. Strakke afwerking, nette werkplek, op tijd klaar."'
+              data-en='"Tiles and parquet laid throughout the whole apartment. Clean finish, tidy workspace, on time."'
+              data-pl='"Płytki i parkiet ułożone w całym mieszkaniu. Staranna robota, czyste miejsce pracy, na czas."'>
+              "Tegels en parket gelegd in de hele woning. Strakke afwerking, nette werkplek, op tijd klaar."
+            </p>
+            <div class="flex items-center gap-3 mt-auto">
+              <div
+                class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-500">
+                MK
+              </div>
+              <div>
+                <div class="text-sm font-medium text-stone-900">
+                  Maria K.
+                </div>
+                <div class="text-xs text-stone-400" data-nl="Google Review" data-en="Google Review" data-pl="Opinia Google">Google Review</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[280px] md:w-[320px] flex-shrink-0 bg-stone-50 rounded-2xl p-6 border border-stone-100 flex flex-col h-full">
+            <div class="flex text-amber-400 mb-4">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+            </div>
+            <p class="text-stone-600 mb-6 flex-grow leading-relaxed"
+              data-nl='"Gipsplaatwerk en spackelen in de slaapkamer. Muren zijn strak als nieuw. Absolute aanrader."'
+              data-en='"Drywall and plastering in the bedroom. Walls are smooth as new. Highly recommended."'
+              data-pl='"Płyty gipsowe i szpachlowanie w sypialni. Ściany gładkie jak nowe. Gorąco polecam."'>
+              "Gipsplaatwerk en spackelen in de slaapkamer. Muren zijn strak als nieuw. Absolute aanrader."
+            </p>
+            <div class="flex items-center gap-3 mt-auto">
+              <div
+                class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-500">
+                TR
+              </div>
+              <div>
+                <div class="text-sm font-medium text-stone-900">
+                  Thomas R.
+                </div>
+                <div class="text-xs text-stone-400" data-nl="Google Review" data-en="Google Review" data-pl="Opinia Google">Google Review</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Items Set 2 (Duplicated for Pure CSS Loop) -->
+          <div
+            class="w-[280px] md:w-[320px] flex-shrink-0 bg-stone-50 rounded-2xl p-6 border border-stone-100 flex flex-col h-full"
+            aria-hidden="true">
+            <div class="flex text-amber-400 mb-4">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+            </div>
+            <p class="text-stone-600 mb-6 flex-grow leading-relaxed"
+              data-nl='"Badkamer volledig gerenoveerd, alles perfect afgewerkt. Geen gedoe, gewoon goed vakwerk."'
+              data-en='"Full bathroom renovation, everything finished perfectly. No fuss, just quality work."'
+              data-pl='"Pełna renowacja łazienki, wszystko wykończone perfekcyjnie. Bez problemów, tylko dobra robota."'>
+              "Badkamer volledig gerenoveerd, alles perfect afgewerkt. Geen gedoe, gewoon goed vakwerk."
+            </p>
+            <div class="flex items-center gap-3 mt-auto">
+              <div
+                class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-500">
+                JV
+              </div>
+              <div>
+                <div class="text-sm font-medium text-stone-900">
+                  Jan V.
+                </div>
+                <div class="text-xs text-stone-400" data-nl="Google Review" data-en="Google Review" data-pl="Opinia Google">Google Review</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[280px] md:w-[320px] flex-shrink-0 bg-stone-50 rounded-2xl p-6 border border-stone-100 flex flex-col h-full"
+            aria-hidden="true">
+            <div class="flex text-amber-400 mb-4">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+            </div>
+            <p class="text-stone-600 mb-6 flex-grow leading-relaxed"
+              data-nl='"Tegels en parket gelegd in de hele woning. Strakke afwerking, nette werkplek, op tijd klaar."'
+              data-en='"Tiles and parquet laid throughout the whole apartment. Clean finish, tidy workspace, on time."'
+              data-pl='"Płytki i parkiet ułożone w całym mieszkaniu. Staranna robota, czyste miejsce pracy, na czas."'>
+              "Tegels en parket gelegd in de hele woning. Strakke afwerking, nette werkplek, op tijd klaar."
+            </p>
+            <div class="flex items-center gap-3 mt-auto">
+              <div
+                class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-500">
+                MK
+              </div>
+              <div>
+                <div class="text-sm font-medium text-stone-900">
+                  Maria K.
+                </div>
+                <div class="text-xs text-stone-400" data-nl="Google Review" data-en="Google Review" data-pl="Opinia Google">Google Review</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[280px] md:w-[320px] flex-shrink-0 bg-stone-50 rounded-2xl p-6 border border-stone-100 flex flex-col h-full"
+            aria-hidden="true">
+            <div class="flex text-amber-400 mb-4">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+            </div>
+            <p class="text-stone-600 mb-6 flex-grow leading-relaxed"
+              data-nl='"Gipsplaatwerk en spackelen in de slaapkamer. Muren zijn strak als nieuw. Absolute aanrader."'
+              data-en='"Drywall and plastering in the bedroom. Walls are smooth as new. Highly recommended."'
+              data-pl='"Płyty gipsowe i szpachlowanie w sypialni. Ściany gładkie jak nowe. Gorąco polecam."'>
+              "Gipsplaatwerk en spackelen in de slaapkamer. Muren zijn strak als nieuw. Absolute aanrader."
+            </p>
+            <div class="flex items-center gap-3 mt-auto">
+              <div
+                class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-500">
+                TR
+              </div>
+              <div>
+                <div class="text-sm font-medium text-stone-900">
+                  Thomas R.
+                </div>
+                <div class="text-xs text-stone-400" data-nl="Google Review" data-en="Google Review" data-pl="Opinia Google">Google Review</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="bg-stone-50 border-stone-200 border-b pt-24 pb-24 relative overflow-hidden" id="services">
+    <div class="absolute inset-0 z-0 pointer-events-none relative z-10">
+      <div class="absolute inset-0 bg-grid-stone"></div>
+      <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-stone-300/40 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3 mix-blend-multiply">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-200/40 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/3 mix-blend-multiply">
+      </div>
+    </div>
+    <div class="max-w-7xl mr-auto ml-auto pr-6 pl-6">
+      <div class="reveal text-center mb-16">
+        <h2 class="md:text-4xl text-3xl font-medium text-stone-900 tracking-tight mb-4" data-nl="Onze Expertises"
+          data-en="Our Expertise" data-pl="Nasze Specjalizacje">
+          Onze Expertises
+        </h2>
+        <p class="text-lg text-stone-500 max-w-2xl mx-auto"
+          data-nl="Van de eerste steen tot de laatste laag verf: kwaliteit staat voorop."
+          data-en="From the first brick to the final coat of paint: quality comes first."
+          data-pl="Od pierwszej cegły do ostatniej warstwy farby: jakość jest najważniejsza.">
+          Van de eerste steen tot de laatste laag verf: kwaliteit staat voorop.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <!-- Card 1: Badkamerrenovatie -->
+        <div
+          class="flex flex-col bg-white h-full border border-stone-100 rounded-[2rem] p-3 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group reveal">
+          <div class="relative w-full h-64 md:h-80 bg-stone-100 rounded-2xl overflow-hidden group/slider">
+            <!-- Slider Container -->
+            <div class="card-slider flex w-full h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+              style="scrollbar-width: none; -ms-overflow-style: none;">
+              <img src="images/portfolio/baie-1.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Badkamerrenovatie">
+              <img src="images/portfolio/baie-2.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Badkamerrenovatie">
+              <img src="images/portfolio/baie-3.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Badkamerrenovatie">
+              <img src="images/portfolio/baie-4.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Badkamerrenovatie">
+              <img src="images/portfolio/baie-5.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Badkamerrenovatie">
+            </div>
+            <!-- Slider Hint -->
+            <div
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 opacity-0 group-hover/slider:opacity-100 transition-opacity bg-black/30 px-3 py-1.5 rounded-full text-white/90 text-xs backdrop-blur-sm pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+              <span data-nl="Swipe" data-en="Swipe" data-pl="Przesuń">Swipe</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="pt-6 px-4 pb-4">
+            <h3 class="text-xl md:text-2xl font-semibold text-stone-900 mb-3 tracking-tight" data-nl="Badkamerrenovatie"
+              data-en="Bathroom Renovation" data-pl="Renowacja Łazienki">
+              Badkamerrenovatie
+            </h3>
+            <p class="text-stone-500 text-base leading-relaxed"
+              data-nl="Van complete renovaties tot strak tegelwerk. Moderne inloopdouches, nissen met LED en perfecte afwerking."
+              data-en="From complete renovations to sleek tiling. Modern walk-in showers, LED niches, and perfect finishes."
+              data-pl="Od kompletnych renowacji po ułożenie płytek. Nowoczesne kabiny prysznicowe, wnęki z LED i perfekcyjne wykończenia.">
+              Van complete renovaties tot strak tegelwerk. Moderne inloopdouches, nissen met LED en perfecte afwerking.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Vloeren & Parquet -->
+        <div
+          class="flex flex-col bg-white h-full border border-stone-100 rounded-[2rem] p-3 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group reveal delay-100">
+          <div class="relative w-full h-64 md:h-80 bg-stone-100 rounded-2xl overflow-hidden group/slider">
+            <!-- Slider Container -->
+            <div class="card-slider flex w-full h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+              style="scrollbar-width: none; -ms-overflow-style: none;">
+              <img src="images/portfolio/parchet-1.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Vloeren en Parquet">
+              <img src="images/portfolio/parchet-2.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Vloeren en Parquet">
+              <img src="images/portfolio/parchet-3.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Vloeren en Parquet">
+              <img src="images/portfolio/parchet-4.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Vloeren en Parquet">
+            </div>
+            <!-- Slider Hint -->
+            <div
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 opacity-0 group-hover/slider:opacity-100 transition-opacity bg-black/30 px-3 py-1.5 rounded-full text-white/90 text-xs backdrop-blur-sm pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+              <span data-nl="Swipe" data-en="Swipe" data-pl="Przesuń">Swipe</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="pt-6 px-4 pb-4">
+            <h3 class="text-xl md:text-2xl font-semibold text-stone-900 mb-3 tracking-tight" data-nl="Vloeren & Parket"
+              data-en="Flooring & Parquet" data-pl="Podłogi i Parkiet">
+              Vloeren & Parket
+            </h3>
+            <p class="text-stone-500 text-base leading-relaxed"
+              data-nl="Vakkundig gelegd laminaat, parket en tegels voor uw hele woning. Strak, naadloos en duurzaam."
+              data-en="Expertly laid laminate, parquet, and tiles for your entire home. Sleek, seamless, and durable."
+              data-pl="Fachowo ułożony laminat, parkiet i płytki w całym domu. Eleganckie, bezszwowe i trwałe.">
+              Vakkundig gelegd laminaat, parket en tegels voor uw hele woning. Strak, naadloos en duurzaam.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Traprenovatie -->
+        <div
+          class="flex flex-col bg-white h-full border border-stone-100 rounded-[2rem] p-3 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group reveal">
+          <div class="relative w-full h-64 md:h-80 bg-stone-100 rounded-2xl overflow-hidden group/slider">
+            <!-- Slider Container -->
+            <div class="card-slider flex w-full h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+              style="scrollbar-width: none; -ms-overflow-style: none;">
+              <img src="images/portfolio/scari-1.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Traprenovatie">
+              <img src="images/portfolio/scari-2.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Traprenovatie">
+            </div>
+            <!-- Slider Hint -->
+            <div
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 opacity-0 group-hover/slider:opacity-100 transition-opacity bg-black/30 px-3 py-1.5 rounded-full text-white/90 text-xs backdrop-blur-sm pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+              <span data-nl="Swipe" data-en="Swipe" data-pl="Przesuń">Swipe</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="pt-6 px-4 pb-4">
+            <h3 class="text-xl md:text-2xl font-semibold text-stone-900 mb-3 tracking-tight" data-nl="Traprenovatie"
+              data-en="Stair Renovation" data-pl="Renowacja Schodów">
+              Traprenovatie
+            </h3>
+            <p class="text-stone-500 text-base leading-relaxed"
+              data-nl="Uw trap als nieuw. Maatwerk in afwerking, van klassiek wit tot warme houttinten met perfecte detaillering."
+              data-en="Your stairs like new. Custom finishing, from classic white to warm wood tones with perfect detailing."
+              data-pl="Twoje schody jak nowe. Wykończenie na wymiar, od klasycznej bieli po ciepłe odcienie drewna z perfekcyjnymi detalami.">
+              Uw trap als nieuw. Maatwerk in afwerking, van klassiek wit tot warme houttinten met perfecte detaillering.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Gipsplaat & Spachtelwerk -->
+        <div
+          class="flex flex-col bg-white h-full border border-stone-100 rounded-[2rem] p-3 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group reveal delay-100">
+          <div class="relative w-full h-64 md:h-80 bg-stone-100 rounded-2xl overflow-hidden group/slider">
+            <!-- Slider Container -->
+            <div class="card-slider flex w-full h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+              style="scrollbar-width: none; -ms-overflow-style: none;">
+              <img src="images/portfolio/tavan-1.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Gipsplaat en Spachtelwerk">
+              <img src="images/portfolio/living-1.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Gipsplaat en Spachtelwerk">
+              <img src="images/portfolio/living-2.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Gipsplaat en Spachtelwerk">
+              <img src="images/portfolio/living-3.jpg" loading="lazy"
+                class="w-full h-full object-cover flex-shrink-0 snap-center" alt="Gipsplaat en Spachtelwerk">
+            </div>
+            <!-- Slider Hint -->
+            <div
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 opacity-0 group-hover/slider:opacity-100 transition-opacity bg-black/30 px-3 py-1.5 rounded-full text-white/90 text-xs backdrop-blur-sm pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+              <span data-nl="Swipe" data-en="Swipe" data-pl="Przesuń">Swipe</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="pt-6 px-4 pb-4">
+            <h3 class="text-xl md:text-2xl font-semibold text-stone-900 mb-3 tracking-tight"
+              data-nl="Gipsplaat & Spachtelwerk" data-en="Drywall & Plastering" data-pl="Płyty Gipsowe & Szpachlowanie">
+              Gipsplaat & Spachtelwerk
+            </h3>
+            <p class="text-stone-500 text-base leading-relaxed"
+              data-nl="Verlaagde plafonds met verlichting, strak afgewerkte wanden en spiegelglad stucwerk voor een modern interieur."
+              data-en="Suspended ceilings with lighting, neatly finished walls, and mirror-smooth plasterwork for a modern interior."
+              data-pl="Sufity podwieszane z oświetleniem, starannie wykończone ściany i gładkie jak lustro tynki dla nowoczesnego wnętrza.">
+              Verlaagde plafonds met verlichting, strak afgewerkte wanden en spiegelglad stucwerk voor een modern
+              interieur.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- All Services Grid -->
+      <div class="bg-white rounded-2xl border border-stone-100 p-8 md:p-12 reveal mt-8">
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+          <div class="md:w-1/3">
+            <h3 class="text-2xl font-medium text-stone-900 mb-4 tracking-tight" data-nl="Volledig Overzicht"
+              data-en="All Services" data-pl="Pełna Lista Usług">
+              Volledig Overzicht
+            </h3>
+            <p class="text-stone-500 text-lg leading-relaxed mb-6"
+              data-nl="Een greep uit alles wat ik voor u kan betekenen."
+              data-en="An overview of everything I can do for you."
+              data-pl="Przegląd wszystkiego, co mogę dla Ciebie zrobić.">
+              Een greep uit alles wat ik voor u kan betekenen.
+            </p>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 text-base font-medium text-accent-600 hover:text-accent-700 transition-colors">
+              <span data-nl="Staat uw klus er niet bij? Vraag het gerust." data-en="Not on the list? Just ask."
+                data-pl="Nie ma na liście? Zapytaj śmiało.">Staat uw klus er niet bij? Vraag het gerust.</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14m-7-7l7 7l-7 7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="md:w-2/3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-3">
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px]">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Badkamerrenovatie" data-en="Bathroom renovation"
+                data-pl="Remont łazienki">Badkamerrenovatie</span>
+            </div>
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px]">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Tegelwerk" data-en="Tiling"
+                data-pl="Glazurnictwo">Tegelwerk</span>
+            </div>
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px]">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Spachtelwerk & stucwerk"
+                data-en="Plastering & finishing" data-pl="Szpachlowanie i tynkowanie">Spachtelwerk & stucwerk</span>
+            </div>
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px]">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Schilderwerk & behang"
+                data-en="Painting & wallpapering" data-pl="Malowanie i tapetowanie">Schilderwerk & behang</span>
+            </div>
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px]">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Plafonds & gipsplaatwerk"
+                data-en="Ceilings & drywall" data-pl="Sufity i ścianki GK">Plafonds & gipsplaatwerk</span>
+            </div>
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px]">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Laminaat & parket" data-en="Laminate & parquet"
+                data-pl="Panele podłogowe">Laminaat & parket</span>
+            </div>
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px]">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Plinten & sierstucwerk"
+                data-en="Skirting & moldings" data-pl="Listwy, plinty, sztukateria">Plinten & sierstucwerk</span>
+            </div>
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px]">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Traprenovatie" data-en="Stair renovation"
+                data-pl="Renowacja schodów">Traprenovatie</span>
+            </div>
+            <div
+              class="rounded-xl py-3 px-4 bg-stone-50 border border-stone-200/60 flex items-start gap-2 hover:-translate-y-0.5 transition-transform cursor-default min-h-[56px] col-span-2 md:col-span-1">
+              <span class="text-accent-500 text-lg">▪</span>
+              <span class="font-medium text-stone-700 text-sm" data-nl="Zolderverbouwing" data-en="Attic conversion"
+                data-pl="Adaptacja poddaszy">Zolderverbouwing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-white pt-24 pb-24">
+    <div class="max-w-7xl mr-auto ml-auto pr-6 pl-6">
+      <div class="reveal mb-16">
+        <h2 class="md:text-4xl text-3xl font-medium text-stone-900 tracking-tight"
+          data-nl="Waarom kiezen voor Premium Afbouw" data-en="Why Choose Premium Afbouw"
+          data-pl="Dlaczego warto wybrać Premium Afbouw">
+          Waarom kiezen voor Premium Afbouw
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Feature 1 -->
+        <div
+          class="p-6 rounded-2xl bg-stone-50 border border-stone-100 reveal group hover:bg-white hover:shadow-lg transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="32" height="32"
+            viewBox="0 0 24 24" data-icon="lucide:heart-handshake" style="stroke-width: 1.5;"
+            class="iconify text-stone-400 group-hover:text-accent-500 transition-colors mb-4 iconify--lucide">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676a.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052a2.12 2.12 0 0 0-.004-3a2.124 2.124 0 1 0 3-3a2.124 2.124 0 0 0 3.004 0a2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0a2 2 0 0 1 0-2.828l2.823-2.762">
+            </path>
+          </svg>
+          <h3 class="text-xl font-medium text-stone-900 mb-2" data-nl="Ouderwetse Waarden"
+            data-en="Old-Fashioned Values" data-pl="Tradycyjne Wartości">
+            Ouderwetse Waarden
+          </h3>
+          <p class="text-stone-500 text-base"
+            data-nl="Wij hechten meer waarde aan mensen en resultaten dan aan automatisering. U krijgt een professionele service met een vriendelijke, persoonlijke touch."
+            data-en="We value people and results over automation. You get a professional service with a friendly, personal touch."
+            data-pl="Cenimy ludzi i wyniki bardziej niż automatyzację. Otrzymujesz profesjonalną obsługę z przyjaznym, osobistym podejściem.">
+            Wij hechten meer waarde aan mensen en resultaten dan aan automatisering. U krijgt een professionele service
+            met een vriendelijke, persoonlijke touch.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div
+          class="reveal delay-100 group hover:bg-white hover:shadow-lg transition-all duration-300 bg-stone-50 border-stone-100 border rounded-2xl p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="32" height="32"
+            viewBox="0 0 24 24" data-icon="lucide:ruler" style="stroke-width: 1.5;"
+            class="iconify text-stone-400 group-hover:text-accent-500 transition-colors mb-4 iconify--lucide">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Zm-6.8-2.8l2-2m-5-1l2-2m-5-1l2-2m7 11l2-2">
+            </path>
+          </svg>
+          <h3 class="text-xl font-medium text-stone-900 mb-2" data-nl="Oog voor Detail" data-en="Attention to Detail"
+            data-pl="Dbałość o Szczegóły">
+            Oog voor Detail
+          </h3>
+          <p class="text-stone-500 text-base"
+            data-nl="Kwaliteit en afwerking zijn belangrijk. Wij behandelen uw huis met respect en werken met grote zorgvuldigheid."
+            data-en="Quality work and finishing matter. We treat your home with respect and work with great care."
+            data-pl="Liczy się jakość pracy i wykończenia. Traktujemy Twój dom z szacunkiem i pracujemy z dużą starannością.">
+            Kwaliteit en afwerking zijn belangrijk. Wij behandelen uw huis met respect en werken met grote
+            zorgvuldigheid.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div
+          class="p-6 rounded-2xl bg-stone-50 border border-stone-100 reveal delay-200 group hover:bg-white hover:shadow-lg transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="32" height="32"
+            viewBox="0 0 24 24" data-icon="lucide:clipboard-check" style="stroke-width: 1.5;"
+            class="iconify text-stone-400 group-hover:text-accent-500 transition-colors mb-4 iconify--lucide">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <path d="m9 14l2 2l4-4"></path>
+            </g>
+          </svg>
+          <h3 class="text-xl font-medium text-stone-900 mb-2" data-nl="Alleen Offertes op Locatie"
+            data-en="On-Site Quotes Only" data-pl="Wyceny tylko na miejscu">
+            Alleen Offertes op Locatie
+          </h3>
+          <p class="text-stone-500 text-base"
+            data-nl="Geen giswerk. Wij komen persoonlijk langs om uw project te beoordelen voordat we een offerte uitbrengen."
+            data-en="No guesswork. We visit your site to assess your project personally before providing a quote."
+            data-pl="Żadnego zgadywania. Odwiedzamy Cię osobiście, aby ocenić projekt przed podaniem wyceny.">
+            Geen giswerk. Wij komen persoonlijk langs om uw project te beoordelen voordat we een offerte uitbrengen.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div
+          class="p-6 rounded-2xl bg-stone-50 border border-stone-100 reveal delay-300 group hover:bg-white hover:shadow-lg transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="32" height="32"
+            viewBox="0 0 24 24" data-icon="lucide:shield" style="stroke-width: 1.5;"
+            class="iconify text-stone-400 group-hover:text-accent-500 transition-colors mb-4 iconify--lucide">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+            </path>
+          </svg>
+          <h3 class="text-xl font-medium text-stone-900 mb-2" data-nl="Bescherming van uw Investering"
+            data-en="Protecting your Investment" data-pl="Ochrona Twojej Inwestycji">
+            Bescherming van uw Investering
+          </h3>
+          <p class="text-stone-500 text-base"
+            data-nl="Wij geven prioriteit aan langdurige kwaliteit. Onze afwerking verlengt de levensduur van uw woning."
+            data-en="We prioritise long-term quality. Our finishing extends the life of your home."
+            data-pl="Stawiamy na długoterminową jakość. Nasze wykończenie przedłuża żywotność Twojego domu.">
+            Wij geven prioriteit aan langdurige kwaliteit. Onze afwerking verlengt de levensduur van uw woning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet The Owner / About -->
+  <section class="overflow-hidden text-white bg-stone-900 pt-24 pb-24 relative" id="about">
+    <div class="transform bg-stone-800/50 w-1/2 h-full absolute top-0 right-0 translate-x-1/4 skew-x-12"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2 reveal">
+          <div class="inline-block text-accent-400 font-medium text-sm mb-4 tracking-wide uppercase" data-nl="Over ons"
+            data-en="About us" data-pl="O nas">
+            Over ons
+          </div>
+          <h2 class="text-3xl md:text-5xl font-medium mb-6 tracking-tight">
+            Aleksander
+          </h2>
+          <h3 class="text-xl text-stone-300 mb-8 font-medium" data-nl="Uw Vakman" data-en="Your Craftsman"
+            data-pl="Twój Fachowiec">
+            Uw Vakman
+          </h3>
+
+          <div class="prose prose-invert prose-lg text-stone-400 mb-10 leading-relaxed">
+            <p class=""
+              data-nl="Hallo, ik ben Aleksander. Mijn aanpak is simpel: ik zeg wat ik doe, en ik doe wat ik zeg. Geen verrassingen achteraf."
+              data-en="Hi, I'm Aleksander. My approach is simple: I say what I do, and I do what I say. No surprises afterwards."
+              data-pl="Cześć, jestem Aleksander. Moje podejście jest proste: mówię, co robię, i robię to, co mówię. Żadnych niespodzianek na koniec.">
+              Hallo, ik ben Aleksander. Mijn aanpak is simpel: ik zeg wat ik doe, en ik doe wat ik zeg. Geen
+              verrassingen achteraf.
+            </p>
+            <p class="mt-4"
+              data-nl="Of het nu gaat om het netjes stucen van een muur of een volledige badkamerrenovatie, ik pak het aan alsof het mijn eigen huis is. Netjes werken, afspraken nakomen en een resultaat waar we allebei trots op kunnen zijn."
+              data-en="Whether it's neatly plastering a wall or a full bathroom renovation, I treat it as if it were my own home. Working neatly, keeping promises, and delivering a result we can both be proud of."
+              data-pl="Czy to staranne tynkowanie ściany, czy pełna renowacja łazienki, traktuję to jak mój własny dom. Schludna praca, dotrzymywanie słowa i efekt, z którego oboje możemy być dumni.">
+              Of het nu gaat om het netjes stucen van een muur of een volledige badkamerrenovatie, ik pak het aan alsof
+              het mijn eigen huis is. Netjes werken, afspraken nakomen en een resultaat waar we allebei trots op kunnen
+              zijn.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-accent-400 border border-stone-700">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20"
+                  viewBox="0 0 24 24" data-icon="lucide:check" class="iconify iconify--lucide">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </div>
+              <span class="text-sm font-medium text-stone-200" data-nl="Eerlijke communicatie"
+                data-en="Honest communication" data-pl="Uczciwa komunikacja">
+                Eerlijke communicatie
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-accent-400 border border-stone-700">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20"
+                  viewBox="0 0 24 24" data-icon="lucide:check" class="iconify iconify--lucide">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </div>
+              <span class="text-sm font-medium text-stone-200" data-nl="Solide afwerking" data-en="Solid finish"
+                data-pl="Solidne wykończenie">
+                Solide afwerking
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 reveal delay-200">
+          <div
+            class="overflow-hidden aspect-[4/5] bg-center bg-stone-800 bg-[url(profil.png)] max-w-md bg-cover border-stone-700 border rounded-2xl mr-auto ml-auto relative shadow-2xl">
+            <div class="absolute bottom-6 left-6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="bg-stone-50 pt-24 pb-24 relative overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none relative z-10">
+      <div class="absolute inset-0 bg-grid-stone"></div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-stone-300/40 rounded-full blur-[90px] mix-blend-multiply">
+      </div>
+    </div>
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl md:text-4xl font-medium text-stone-900 tracking-tight mb-4" data-nl="Veelgestelde Vragen"
+          data-en="Frequently Asked Questions" data-pl="Często Zadawane Pytania">
+          Veelgestelde Vragen
+        </h2>
+        <p class="text-stone-500" data-nl="Duidelijkheid vooraf. Geen verrassingen."
+          data-en="Clarity upfront. No surprises." data-pl="Jasność od początku. Żadnych niespodzianek.">
+          Duidelijkheid vooraf. Geen verrassingen.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="bg-white rounded-xl border border-stone-200 overflow-hidden reveal">
+          <button
+            class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
+            onclick="toggleAccordion(this)" aria-expanded="false">
+            <span class="font-medium text-stone-900" data-nl="Werk je ook in het weekend?"
+              data-en="Do you also work on weekends?" data-pl="Czy pracujesz również w weekendy?">
+              Werk je ook in het weekend?
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20"
+              viewBox="0 0 24 24" data-icon="lucide:chevron-down"
+              class="accordion-icon iconify text-stone-400 iconify--lucide">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m6 9l6 6l6-6"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-stone-50/50">
+            <div class="px-6 pb-6 pt-2 text-stone-600 text-sm leading-relaxed"
+              data-nl="In overleg is veel mogelijk. Als een klus snel af moet, maken we daar afspraken over."
+              data-en="A lot is possible in consultation. If a job needs to be finished quickly, we can make arrangements."
+              data-pl="Wiele zależy od ustaleń. Jeśli projekt musi być szybko ukończony, możemy się dogadać.">
+              In overleg is veel mogelijk. Als een klus snel af moet, maken we daar afspraken over.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="bg-white rounded-xl border border-stone-200 overflow-hidden reveal delay-100">
+          <button
+            class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
+            onclick="toggleAccordion(this)" aria-expanded="false">
+            <span class="font-medium text-stone-900" data-nl="Ruim je alles netjes op?"
+              data-en="Do you clean everything up neatly?" data-pl="Czy po wszystkim sprzątasz?">
+              Ruim je alles netjes op?
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20"
+              viewBox="0 0 24 24" data-icon="lucide:chevron-down"
+              class="accordion-icon iconify text-stone-400 iconify--lucide">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m6 9l6 6l6-6"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-stone-50/50">
+            <div class="px-6 pb-6 pt-2 text-stone-600 text-sm leading-relaxed"
+              data-nl="Ja, standaard. Ik laat de werkplek altijd bezemschoon en opgeruimd achter."
+              data-en="Yes, standard. I always leave the workspace broom clean and tidy."
+              data-pl="Tak, standardowo. Zawsze zostawiam miejsce pracy pozamiatane i uporządkowane.">
+              Ja, standaard. Ik laat de werkplek altijd bezemschoon en opgeruimd achter.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="bg-white rounded-xl border border-stone-200 overflow-hidden reveal delay-200">
+          <button
+            class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
+            onclick="toggleAccordion(this)" aria-expanded="false">
+            <span class="font-medium text-stone-900" data-nl="Geef je garantie op het werk?"
+              data-en="Do you provide a warranty on the work?" data-pl="Czy udzielasz gwarancji na wykonaną pracę?">Geef
+              je garantie op het werk?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20"
+              viewBox="0 0 24 24" data-icon="lucide:chevron-down"
+              class="accordion-icon iconify text-stone-400 iconify--lucide">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m6 9l6 6l6-6"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-stone-50/50">
+            <div class="px-6 pb-6 pt-2 text-stone-600 text-sm leading-relaxed"
+              data-nl="Uiteraard. Ik sta achter de kwaliteit die ik lever. Mocht er iets zijn, los ik het op."
+              data-en="Of course. I stand behind the quality I deliver. If there is anything, I'll fix it."
+              data-pl="Oczywiście. Gwarantuję jakość swojej pracy. Jeśli coś będzie nie tak, naprawię to.">
+              Uiteraard. Ik sta achter de kwaliteit die ik lever. Mocht er iets zijn, los ik het op.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ Item 4 -->
+        <div class="bg-white rounded-xl border border-stone-200 overflow-hidden reveal delay-300">
+          <button
+            class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
+            onclick="toggleAccordion(this)" aria-expanded="false">
+            <span class="font-medium text-stone-900" data-nl="Hoe snel kun je beginnen?"
+              data-en="How quickly can you start?" data-pl="Jak szybko możesz zacząć?">Hoe snel kun je beginnen?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20"
+              viewBox="0 0 24 24" data-icon="lucide:chevron-down"
+              class="accordion-icon iconify text-stone-400 iconify--lucide">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m6 9l6 6l6-6"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-stone-50/50">
+            <div class="px-6 pb-6 pt-2 text-stone-600 text-sm leading-relaxed"
+              data-nl="Dit hangt af van mijn planning. Neem contact op, dan kijken we samen naar de eerste vrije datum."
+              data-en="This depends on my schedule. Get in touch, and we'll see when the first available date is."
+              data-pl="Zależy to od mojego harmonogramu. Skontaktuj się ze mną, a znajdziemy pierwszy wolny termin.">
+              Dit hangt af van mijn planning. Neem contact op, dan kijken we samen naar de eerste vrije datum.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ Item 5 -->
+        <div class="bg-white rounded-xl border border-stone-200 overflow-hidden reveal delay-400">
+          <button
+            class="accordion-btn w-full px-6 py-5 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
+            onclick="toggleAccordion(this)" aria-expanded="false">
+            <span class="font-medium text-stone-900" data-nl="Zorg jij voor de materialen?"
+              data-en="Do you provide the materials?" data-pl="Czy zapewniasz materiały?">Zorg jij voor de
+              materialen?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20"
+              viewBox="0 0 24 24" data-icon="lucide:chevron-down"
+              class="accordion-icon iconify text-stone-400 iconify--lucide">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m6 9l6 6l6-6"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-stone-50/50">
+            <div class="px-6 pb-6 pt-2 text-stone-600 text-sm leading-relaxed"
+              data-nl="Beide is mogelijk. Ik kan adviseren en materialen inkopen, of ermee werken als je ze zelf hebt geregeld."
+              data-en="Both are possible. I can advise and purchase materials, or work with them if you have arranged them yourself."
+              data-pl="Zarówno jedno, jak i drugie jest możliwe. Doradzę i kupię materiały, lub użyję dostarczonych przez ciebie.">
+              Beide is mogelijk. Ik kan adviseren en materialen inkopen, of ermee werken als je ze zelf hebt geregeld.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-stone-900 text-stone-200 relative overflow-hidden">
+    <div class="absolute inset-0 z-0 bg-grid-white pointer-events-none"></div>
+    <!-- Abstract Background Shape -->
+    <div
+      class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] bg-accent-500/20 rounded-full blur-2xl pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/3 w-[600px] h-[600px] bg-stone-500/20 rounded-full blur-2xl pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <!-- Contact Info -->
+        <div class="reveal">
+          <h2 class="text-3xl md:text-5xl font-medium text-white tracking-tight mb-6" data-nl="Neem Contact Op"
+            data-en="Contact Us" data-pl="Skontaktuj się z nami">
+            Neem Contact Op
+          </h2>
+          <p class="text-stone-400 text-lg mb-10 leading-relaxed max-w-md"
+            data-nl="Klaar om uw project te starten? Bel of stuur een bericht voor een vrijblijvende afspraak."
+            data-en="Ready to start your project? Call or send a message for a free consultation."
+            data-pl="Gotowy do rozpoczęcia projektu? Zadzwoń lub wyślij wiadomość, aby umówić się na bezpłatną konsultację.">
+            Klaar om uw project te starten? Bel of stuur een bericht voor een vrijblijvende afspraak.
+          </p>
+
+          <div class="space-y-8">
+            <a href="tel:+31" class="flex items-start gap-5 group">
+              <div
+                class="w-12 h-12 rounded-xl bg-stone-800 flex items-center justify-center text-accent-400 group-hover:bg-accent-500 group-hover:text-white transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24"
+                  viewBox="0 0 24 24" data-icon="lucide:phone" class="iconify iconify--lucide">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-white mb-1" data-nl="Bel direct" data-en="Call directly"
+                  data-pl="Zadzwoń bezpośrednio">Bel direct</h3>
+                <p class="text-stone-400 group-hover:text-accent-400 transition-colors"
+                  data-nl="📞 Uw nummer hier" data-en="📞 Your number here" data-pl="📞 Twój numer tutaj">
+                  📞 Uw nummer hier
+                </p>
+              </div>
+            </a>
+
+            <a href="https://wa.me/0619144413" target="_blank" class="flex items-start gap-5 group">
+              <div
+                class="w-12 h-12 rounded-xl bg-stone-800 flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="iconify iconify--lucide">
+                  <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                  <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-white mb-1" data-nl="WhatsApp" data-en="WhatsApp"
+                  data-pl="WhatsApp">
+                  WhatsApp
+                </h3>
+                <p class="text-stone-400 group-hover:text-[#25D366] transition-colors" data-nl="Stuur een bericht"
+                  data-en="Send a message" data-pl="Wyślij wiadomość">
+                  Stuur een bericht
+                </p>
+              </div>
+            </a>
+
+            <a href="mailto:your@mail.com" class="flex items-start gap-5 group">
+              <div
+                class="w-12 h-12 rounded-xl bg-stone-800 flex items-center justify-center text-accent-400 group-hover:bg-accent-500 group-hover:text-white transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24"
+                  viewBox="0 0 24 24" data-icon="lucide:mail" class="iconify iconify--lucide">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-white mb-1" data-nl="E-mail" data-en="Email" data-pl="E-mail">E-mail
+                </h3>
+                <p class="text-stone-400 group-hover:text-accent-400 transition-colors">
+                  your@mail.com
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white rounded-3xl p-5 md:p-8 shadow-2xl reveal delay-200">
+          <form class="space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div class="space-y-2">
+                <label for="name" class="text-sm font-medium text-stone-700" data-nl="Naam" data-en="Name"
+                  data-pl="Imię i nazwisko">
+                  Naam
+                </label>
+                <input type="text" id="name"
+                  class="custom-input w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-accent-400 transition-colors bg-stone-50"
+                  placeholder="Uw naam" data-nl="Uw naam" data-en="Your name" data-pl="Twoje imię">
+              </div>
+              <div class="space-y-2">
+                <label for="phone" class="text-sm font-medium text-stone-700" data-nl="Telefoonnummer" data-en="Phone"
+                  data-pl="Telefon">
+                  Telefoonnummer
+                </label>
+                <input type="tel" id="phone"
+                  class="custom-input w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-accent-400 transition-colors bg-stone-50"
+                  placeholder="06 12 34 56 78" data-placeholder-nl="06 12 34 56 78" data-placeholder-en="+31 6 12 34 56 78" data-placeholder-pl="+31 6 12 34 56 78">
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="email" class="text-sm font-medium text-stone-700" data-nl="Emailadres" data-en="Email"
+                data-pl="Email">
+                Emailadres
+              </label>
+              <input type="email" id="email"
+                class="custom-input w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-accent-400 transition-colors bg-stone-50"
+                placeholder="naam@voorbeeld.nl" data-nl="naam@voorbeeld.nl" data-en="name@example.com"
+                data-pl="nazwa@przyklad.pl">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div class="space-y-2">
+                <label for="location" class="text-sm font-medium text-stone-700" data-nl="Locatie" data-en="Location"
+                  data-pl="Lokalizacja">
+                  Locatie
+                </label>
+                <input type="text" id="location"
+                  class="custom-input w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-accent-400 transition-colors bg-stone-50"
+                  placeholder="Bijv. Amsterdam" data-nl="Bijv. Amsterdam" data-en="E.g. Amsterdam"
+                  data-pl="Np. Amsterdam">
+              </div>
+              <div class="space-y-2">
+                <label for="urgency" class="text-sm font-medium text-stone-700" data-nl="Wanneer wilt u beginnen?"
+                  data-en="When do you want to start?" data-pl="Kiedy chcesz zacząć?">
+                  Wanneer wilt u beginnen?
+                </label>
+                <div class="relative">
+                  <select id="urgency"
+                    class="custom-input w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-accent-400 transition-colors bg-stone-50 appearance-none text-stone-600">
+                    <option value="" disabled="" selected="" data-nl="Kies een termijn" data-en="Choose a timeframe"
+                      data-pl="Wybierz termin">
+                      Kies een termijn
+                    </option>
+                    <option value="asap" data-nl="Zo snel mogelijk" data-en="As soon as possible"
+                      data-pl="Jak najszybciej">Zo snel mogelijk</option>
+                    <option value="week" data-nl="Binnen een week" data-en="Within a week" data-pl="W ciągu tygodnia">
+                      Binnen een week</option>
+                    <option value="month" data-nl="Binnen een maand" data-en="Within a month"
+                      data-pl="W ciągu miesiąca">Binnen een maand</option>
+                    <option value="flexible" data-nl="Flexibel" data-en="Flexible" data-pl="Elastyczny">Flexibel
+                    </option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-stone-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-medium text-stone-700" data-nl="Bericht" data-en="Message"
+                data-pl="Wiadomość">
+                Bericht
+              </label>
+              <textarea id="message" rows="4"
+                class="custom-input w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-accent-400 transition-colors bg-stone-50 resize-none"
+                placeholder="Beschrijf kort de klus..." data-nl="Beschrijf kort de klus..."
+                data-en="Briefly describe the job..." data-pl="Krótko opisz zlecenie..."></textarea>
+            </div>
+
+            <div class="space-y-2">
+              <label for="photos" class="text-sm font-medium text-stone-700" data-nl="Foto's van de ruimte (Optioneel)"
+                data-en="Photos of the space (Optional)" data-pl="Zdjęcia przestrzeni (Opcjonalnie)">
+                Foto's van de ruimte (Optioneel)
+              </label>
+              <input type="file" id="photos"
+                class="block w-full text-sm text-stone-500 file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-stone-100 file:text-stone-700 hover:file:bg-stone-200 cursor-pointer border border-stone-200 rounded-lg bg-stone-50"
+                multiple="" accept="image/*">
+            </div>
+            <button type="button"
+              class="w-full bg-stone-900 hover:bg-accent-500 hover:text-white text-white font-medium py-4 rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg mt-2"
+              data-nl="Verstuur Aanvraag" data-en="Send Request" data-pl="Wyślij Zapytanie">
+              Verstuur Aanvraag
+            </button>
+
+            <p class="text-xs text-center text-stone-400 mt-4" data-nl="Wij respecteren uw privacy. Geen spam."
+              data-en="We respect your privacy. No spam." data-pl="Szanujemy Twoją prywatność. Zero spamu.">
+              Wij respecteren uw privacy. Geen spam.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-stone-200 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+        <div class="md:col-span-1">
+          <a href="#" class="flex items-center mb-6">
+            <img src="logo-transparent.png" alt="Premium Afbouw" class="h-10 w-auto opacity-50 hover:opacity-70 transition-opacity duration-300">
+          </a>
+          <p class="text-stone-500 text-sm leading-relaxed"
+            data-nl="Vakmanschap op maat voor uw woning. Van stucwerk tot complete vloer- en badkamerrenovaties."
+            data-en="Custom craftsmanship for your home. From plastering to complete floor and bathroom renovations."
+            data-pl="Rzemiosło na miarę dla Twojego domu. Od tynkowania po kompleksowe renowacje podłóg i łazienek.">
+            Vakmanschap op maat voor uw woning. Van stucwerk tot complete vloer- en badkamerrenovaties.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-stone-900 mb-4" data-nl="Diensten" data-en="Services" data-pl="Usługi">Diensten
+          </h4>
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li>
+              <a href="#services" class="hover:text-accent-600 transition-colors" data-nl="Tegelwerk" data-en="Tiling"
+                data-pl="Glazura">
+                Tegelwerk
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-accent-600 transition-colors" data-nl="Stucwerk"
+                data-en="Plastering" data-pl="Tynkowanie">
+                Stucwerk
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-accent-600 transition-colors" data-nl="Badkamerrenovatie"
+                data-en="Bathroom Renovation" data-pl="Renowacja Łazienki">
+                Badkamerrenovatie
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-accent-600 transition-colors" data-nl="Vloeren" data-en="Flooring"
+                data-pl="Podłogi">
+                Vloeren
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-stone-900 mb-4" data-nl="Contact" data-en="Contact" data-pl="Kontakt">Contact
+          </h4>
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span data-nl="📞 Uw nummer hier" data-en="📞 Your number here" data-pl="📞 Twój numer tutaj">📞 Uw nummer hier</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              your@mail.com
+            </li>
+            <li class="pt-2">
+              <div class="flex gap-4">
+                <!-- Social Icons -->
+                <a href="#" class="text-stone-400 hover:text-stone-900 transition-colors" aria-label="Facebook">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+                <a href="#" class="text-stone-400 hover:text-stone-900 transition-colors" aria-label="Instagram">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.407-.06 4.123-.06h.08zm0 1.802c-2.607 0-2.923.01-3.957.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.957v.08c0 2.607.01 2.923.058 3.957.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.957-.058h-.08zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-stone-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-400">
+        <p data-nl="© 2025 Premium Afbouw. Alle rechten voorbehouden." data-en="© 2025 Premium Afbouw. All rights reserved." data-pl="© 2025 Premium Afbouw. Wszelkie prawa zastrzeżone.">© 2025 Premium Afbouw. Alle rechten voorbehouden.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-stone-600" data-nl="Privacybeleid" data-en="Privacy Policy"
+            data-pl="Polityka Prywatności">Privacybeleid</a>
+          <a href="#" class="hover:text-stone-600" data-nl="Algemene Voorwaarden" data-en="Terms of Service"
+            data-pl="Zasady Korzystania">Algemene Voorwaarden</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Functionality -->
+  <script>
+    // Mobile Menu Logic
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu.classList.contains('menu-closed')) {
+        menu.classList.remove('menu-closed');
+        menu.classList.add('menu-open');
+      } else {
+        menu.classList.remove('menu-open');
+        menu.classList.add('menu-closed');
+      }
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.remove('menu-open');
+      menu.classList.add('menu-closed');
+    }
+
+    // Accordion Logic
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      // Optional: Close others when one opens (Accordian style)
+      document.querySelectorAll('.accordion-btn').forEach(btn => {
+        if (btn !== button) {
+          btn.setAttribute('aria-expanded', 'false');
+          btn.nextElementSibling.classList.remove('open');
+        }
+      });
+
+      if (!isExpanded) {
+        button.setAttribute('aria-expanded', 'true');
+        content.classList.add('open');
+      } else {
+        button.setAttribute('aria-expanded', 'false');
+        content.classList.remove('open');
+      }
+    }
+
+    // Intersection Observer for Reveal on Scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Only animate once
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Navbar hide on scroll down, show on scroll up
+      const navbar = document.getElementById('navbar');
+      let lastScrollY = 0;
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+          navbar.style.transform = 'translateY(-100%)';
+        } else {
+          navbar.style.transform = 'translateY(0)';
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('mousemove', e => { document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px'); document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px'); });
+  </script>
+  <div class="pointer-events-none fixed inset-0 z-[30] transition duration-300"
+    style="background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(245, 158, 11, 0.08), transparent 40%);">
+  </div>
+
+</body>
+
+</html>
